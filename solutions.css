@@ -37,3 +37,129 @@
 .ex-4-square:hover {
     opacity: 0;
 }
+
+/* Es 5 */
+
+.ex-5-square {
+    transition: ease-out 2s;
+}
+
+.ex-5-square:hover {
+    transform: scale(1.5);
+}
+
+.ex-5-square:active {
+    transform: scale(0.5);
+}
+
+/* Es 6 */
+
+.ex-6-img {
+    transition: ease-out 2s;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+/* Es 7 */
+
+.ex-7-img {
+    transition: ease-in-out 2s;
+}
+
+.ex-7-img:hover {
+    filter: saturate(50%) invert(100%);
+}
+
+/* Es 8 */
+
+.ex-8-img {
+    transition: ease-in-out 2s;
+}
+
+.ex-8-img:hover {
+    filter: contrast(50%) blur(1px);
+    border-radius: 30px;
+}
+
+/* Es 9 */
+
+.ex-9-img {
+    transition: ease-in 2s;
+}
+
+.ex-9-img:hover {
+    filter: hue-rotate(180deg) invert(75%);
+    border-radius: 30px;
+    transform: scale(1.5);
+}
+
+/* Es 10 */
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.ex-10-icon {
+    animation: rotate 4s infinite;
+}
+
+/* Es 11 */
+
+@keyframes rotate-first {
+    0% {transform: rotate(0deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.ex-11-icon:hover {
+    animation: rotate-first 4s infinite;
+}
+
+/* Es 12 */
+
+.ex-12-top-white {
+   transition: linear 2s;
+}
+
+.ex-12-bottom-white {
+    transition: linear 2s;
+ }
+
+.ex-12-button:hover .ex-12-top-white{
+    left: 50%;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    right: 50%;
+}
+
+/* Es 13 */
+
+@keyframes rotate-white-top {
+    0% {left: 10%; top: -10px;}
+    20% {left: 90%; top: -10px;}
+    40% {top: 90%; left: 90%;}
+    60% {left: -10%; top: 90%;}
+    80% {top: -10px; left: -10%;}
+    100% {left: 10%; top: -10px;}
+}
+
+.ex-13-top-white {
+    animation: rotate-white-top 10s infinite linear;
+}
+
+@keyframes rotate-white-bottom {
+    0% {right: 20%; bottom: -10px;}
+    20% {right: 80%; bottom: -10px;}
+    40% {bottom: 90%; right: 80%;}
+    60% {right: -10%; bottom: 90%;}
+    80% {bottom: -10px; right: -10%;}
+    100% {right: 20%; bottom: -10px;}
+}
+
+.ex-13-bottom-white {
+    animation: rotate-white-bottom 10s infinite linear;
+}
